@@ -1,0 +1,107 @@
+/* Configurações Gerais */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+    color: #2c3e50;
+    text-align: center;
+}
+
+/* --- NOVO ESTILO DA IMAGEM --- */
+img {
+    display: block; /* Torna a imagem um bloco para centralizar */
+    max-width: 180px; /* Define um tamanho menor e fixo */
+    height: auto; /* Mantém a proporção */
+    margin: 20px auto; /* Centraliza horizontalmente e adiciona espaço vertical */
+    border-radius: 50%; /* Torna a imagem perfeitamente redonda */
+    object-fit: cover; /* Garante que a imagem preencha o círculo sem distorção */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Adiciona uma sombra suave para destaque */
+    border: 3px solid white; /* Um pequeno contorno branco para acabamento */
+}
+/* ------------------------------- */
+
+/* Seções e Espaçamento */
+section, div {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+/* Estilo dos Inputs e Labels */
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Garante que o padding não aumente o tamanho do input */
+}
+
+/* Botões */
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+button[onclick="adicionar()"] {
+    background-color: #27ae60;
+    color: white;
+}
+
+button[onclick="adicionar()"]:hover {
+    background-color: #219150;
+}
+
+button[onclick="limpar()"] {
+    background-color: #e74c3c;
+    color: white;
+}
+
+button[onclick="calcular()"] {
+    background-color: #2980b9;
+    color: white;
+}
+
+/* Lista de Ingredientes */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #f9f9f9;
+    margin-bottom: 5px;
+    padding: 10px;
+    border-left: 4px solid #27ae60;
+    font-size: 0.95em;
+}
+
+/* Destaques de Resultado */
+#custoTotalIngredientesSomados, #resultadoUnidade, #res-sugestão {
+    font-weight: bold;
+    color: #2c3e50;
+    font-size: 1.1em;
+}

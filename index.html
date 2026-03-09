@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Precificador</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Precificador BrigAussie</h1>
+    <img src="imagens/logo brigaussie.png" alt="Logotipo BrigAussie"> 
+        
+        <section id="cadastro-receita">
+
+            <p>Selecione os valores abaixo:</p>
+            
+            <label for="txtIngrediente">Ingrediente:</label>
+            <input type="text" id="txtIngrediente" placeholder="Digite o nome"> <br>
+            
+            <label for="numberPrecoTotal">Preço Total:</label>
+            <input type="number" step="0.01" id="numberPrecoTotal" placeholder="$0,00"> <br>
+            
+            <label for="numberQuantidadeTotal">Peso (em gramas):</label>
+            <input type="number" id="numberQuantidadeTotal" placeholder="Ex: 300g"> <br>
+            
+            <label for="numberQuantidadeUsada">Quantidade usada (em gramas):</label>
+            <input type="number" id="numberQuantidadeUsada" placeholder="Ex: 300g"> <br>
+            
+            <button type="button" onclick="adicionar()">Adicionar à Lista de ingredientes</button>
+            <button type="button" onclick="limpar()">Limpar Campos</button>
+        
+        </section>
+
+        
+        <h2>Lista de ingredientes:</h2>
+        <ul id="lista-ingredientes">
+            </ul>
+      
+        <p>Custo Total dos Ingredientes Somados: <span id="custoTotalIngredientesSomados"> R$ 0,00</span></p>
+        
+        
+        <h2>Informe o Rendimento:</h2>
+        
+        <label for="numberPesoMassa">Peso Total da Receita:</label>
+        <input type="number" id="numberPesoMassa" placeholder="ex: 700g"> <br>
+
+        <label for="numberPesoUnidade">Peso Desejado Por Unidade:</label>
+        <input type="number" id="numberPesoUnidade" placeholder="ex: 20g"> <br>
+        
+        <label for="numberMargem">Margem de lucro(%) Desejada:</label>
+        <input type="number" step="0.01" id="numberMargem" placeholder="$0,00"> <br>
+        
+        <p>O rendimento é de: <span id="resultadoRendimento">0</span> unidades</p>
+        
+       
+        <button type="button" onclick="calcular()">Calcular Custo</button> 
+        
+        <hr> <h2>Preços Finais:</h2>  
+        <ul id="lista-sabores">
+            </ul>
+
+        
+        <div id="resultadoUnidade">
+            O custo será: R$ 0,00
+        </div>
+
+        <div id="res-sugestão">
+            Preço de venda sugerido: R$ 0,00
+        </div>
+        
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
