@@ -1,5 +1,5 @@
 let listaIngredientes = [];
-let custoTotalMassa = 0
+let custoTotalMassa = 0;
 
 function adicionar() {
     let ingrediente = document.getElementById('txtIngrediente').value;
