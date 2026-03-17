@@ -14,20 +14,22 @@
 
             <p>Selecione os valores abaixo:</p>
             
-            <label for="txtIngrediente">Ingrediente:</label>
-            <input type="text" id="txtIngrediente" placeholder="Digite o nome"> <br>
-            
-            <label for="numberPrecoTotal">Preço Total:</label>
-            <input type="number" step="0.01" id="numberPrecoTotal" placeholder="$0,00"> <br>
-            
-            <label for="numberQuantidadeTotal">Peso (em gramas):</label>
-            <input type="number" id="numberQuantidadeTotal" placeholder="Ex: 300g"> <br>
-            
-            <label for="numberQuantidadeUsada">Quantidade usada (em gramas):</label>
-            <input type="number" id="numberQuantidadeUsada" placeholder="Ex: 300g"> <br>
-            
-            <button type="button" onclick="adicionar()">Adicionar à Lista de ingredientes</button>
-            <button type="button" onclick="limpar()">Limpar Campos</button>
+            <form onsubmit="pegarIngrediente(event)">
+                <label for="txtIngrediente">Ingrediente:</label>
+                <input type="text" id="txtIngrediente" placeholder="Digite o nome" required> <br>
+                
+                <label for="numberPrecoTotal">Preço Total:</label>
+                <input type="number" step="0.01" id="numberPrecoTotal" placeholder="$0,00" required> <br>
+                
+                <label for="numberQuantidadeTotal">Peso (em gramas):</label>
+                <input type="number" id="numberQuantidadeTotal" placeholder="Ex: 300g" required> <br>
+                
+                <label for="numberQuantidadeUsada">Quantidade usada (em gramas):</label>
+                <input type="number" id="numberQuantidadeUsada" placeholder="Ex: 300g" required> <br>
+                
+                <button type="submit">Adicionar à Lista de ingredientes</button>
+                <button type="button" onclick="limpar()">Limpar Campos</button>
+            </form>
         
         </section>
 
@@ -43,13 +45,13 @@
             <h2>Informe o Rendimento:</h2>
             
             <label for="numberPesoMassa">Peso Total da Receita:</label>
-            <input type="number" id="numberPesoMassa" placeholder="ex: 700g"> <br>
+            <input type="number" id="numberPesoMassa" placeholder="ex: 700g" required> <br>
            
             <label for="numberPesoUnidade">Peso Desejado Por Unidade:</label>
-            <input type="number" id="numberPesoUnidade" placeholder="ex: 20g"> <br>
+            <input type="number" id="numberPesoUnidade" placeholder="ex: 20g" required> <br>
             
             <label for="numberMargem">Margem de lucro(%) Desejada:</label>
-            <input type="number" step="0.01" id="numberMargem" placeholder="$0,00"> <br>
+            <input type="number" step="0.01" id="numberMargem" placeholder="$0,00" required> <br>
             
             <p>O rendimento é de: <span id="resultadoRendimento">0</span> unidades</p>
             

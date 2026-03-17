@@ -1,7 +1,9 @@
 let listaIngredientes = [];
 let custoTotalMassa = 0;
 
-function adicionar() {
+function pegarIngrediente(event) {
+    event.preventDefault();
+    
     let ingrediente = document.getElementById('txtIngrediente').value;
     let precoTotal = Number(document.getElementById('numberPrecoTotal').value);
     let quantidadeTotalIngredientes = Number(document.getElementById('numberQuantidadeTotal').value);
@@ -14,7 +16,7 @@ function adicionar() {
         peso: quantidadeUsada,
         custo: custoIngredientes
     };
-    
+       
     listaIngredientes.push(ingredienteCalculado);
     
     document.getElementById('lista-ingredientes').innerHTML = "";
